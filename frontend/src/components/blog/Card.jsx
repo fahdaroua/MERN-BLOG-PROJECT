@@ -1,7 +1,7 @@
 import React from "react"
 import "./blog.css"
 import { blog } from "../../assets/data/data"
-import { AiOutlineTags, AiOutlineClockCircle, AiOutlineComment, AiOutlineShareAlt } from "react-icons/ai"
+import { AiOutlineTags, AiOutlineClockCircle } from "react-icons/ai"
 import { Link } from "react-router-dom"
 
 export const Card = ({ posts }) => {
@@ -17,7 +17,7 @@ export const Card = ({ posts }) => {
               <div className='img'>{item.photo && <img src={PublicFlo + item.photo} alt='' />}</div>
               <div className='details'>
                 <div className='tag'>
-                  <AiOutlineTags className='icon' />
+                <AiOutlineTags className='icon' /><h3>{item.category}</h3>
                   {item.categories.map((c) => (
                     <a href='/'>#{c.name}</a>
                   ))}
@@ -28,8 +28,7 @@ export const Card = ({ posts }) => {
                 <p>{item.desc.slice(0, 180)}...</p>
                 <div className='date'>
                   <AiOutlineClockCircle className='icon' /> <label htmlFor=''>{new Date(item.createdAt).toDateString()}</label>
-                  <AiOutlineComment className='icon' /> <label htmlFor=''>27</label>
-                  <AiOutlineShareAlt className='icon' /> <label htmlFor=''>SHARE</label>
+               
                 </div>
               </div>
             </div>

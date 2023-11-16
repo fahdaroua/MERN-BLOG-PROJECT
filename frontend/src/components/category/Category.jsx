@@ -30,7 +30,7 @@ const SamplePrevArrow = (props) => {
     </div>
   )
 }
-export const Category = () => {
+export const Category = (props) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -60,6 +60,9 @@ export const Category = () => {
     }
     getCat()
   }, [search])
+
+const [item,setItem]=useState('')
+console.log(item)
   return (
     <>
       <section className='category'>
@@ -70,10 +73,10 @@ export const Category = () => {
                 <div className='box' key={item.id}>
                   <img src={item.cover} alt='cover' />
                   <div className='overlay'>
-                    <Link to={`/?cat=${item.name}`} className='link'>
+                    <Link to={`/?cat=${item.category}`} className='link'>
                       <h4>{item.category}</h4>
                     </Link>
-                    <p>{item.title}</p>
+                    <p onChange={e=>setItem(e.target)}>{item.title}</p>
                   </div>
                 </div>
               </div>

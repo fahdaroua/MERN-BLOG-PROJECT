@@ -21,9 +21,9 @@ app.use(express.json())
 //---- step : 2.3 last ma file crate garne time
 app.use("/images", express.static(path.join(__dirname, "/images")))
 
-//---- step : 1.3
+mongoose.set('strictQuery', false)
 mongoose
-  .connect(process.env.CONNECTION_URL, {
+  .connect('mongodb://127.0.0.1:27017/blogdata', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     /*  useCreateIndex: true,

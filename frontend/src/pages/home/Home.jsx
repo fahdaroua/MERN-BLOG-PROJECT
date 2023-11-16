@@ -21,7 +21,7 @@ export const Home = () => {
   }, [search])
   return (
     <>
-      <Category />
+      <Category posts={posts} />
       <Card posts={posts} />
     </>
   )

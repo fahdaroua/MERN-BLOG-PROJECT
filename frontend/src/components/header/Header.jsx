@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import logo from "../../assets/images/logo.svg"
+import logo from "../../assets/images/blog1.png"
 import "./header.css"
 import { User } from "./User"
 import { nav } from "../../assets/data/data"

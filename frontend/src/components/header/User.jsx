@@ -37,8 +37,8 @@ export const User = () => {
                       <img src={PublicFlo + user.profilePic} alt='' />
                     </div>
                     <div className='text'>
-                      <h4>{user.username}</h4>
-                      <label>Los Angeles, CA</label>
+                      <h3>{user.username}</h3>
+                      <label></label>
                     </div>
                   </div>
                 </Link>
@@ -48,22 +48,12 @@ export const User = () => {
                     <h4>Create Post</h4>
                   </button>
                 </Link>
+                <Link to='/account'>
                 <button className='box'>
                   <IoSettingsOutline className='icon' />
                   <h4>My Account</h4>
                 </button>
-                <button className='box'>
-                  <BsBagCheck className='icon' />
-                  <h4>My Order</h4>
-                </button>
-                <button className='box'>
-                  <AiOutlineHeart className='icon' />
-                  <h4>Wishlist</h4>
-                </button>
-                <button className='box'>
-                  <GrHelp className='icon' />
-                  <h4>Help</h4>
-                </button>
+                </Link>
                 <button className='box' onClick={handleLogout}>
                   <BiLogOut className='icon' />
                   {user && <h4>Log Out</h4>}
